@@ -1,8 +1,8 @@
 name: red_clan_network
-description: "A new Flutter package project."
+description: "API integration on next level."
 version: 0.0.1
-homepage:
-
+homepage: https://github.com/RanaSharjeelShji/red_clan_network
+license: MIT
 environment:
   sdk: '>=3.3.0 <4.0.0'
   flutter: ">=1.17.0"

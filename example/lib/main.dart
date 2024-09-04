@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
 Future<void> postData() async {
   var bodyData = {
     "email": "codered@youtube.com",
-    "password": "Asd@01814"
+    "secure_pin": "Asd@01814"
   };
   var response = await apiService.request(
     url: 'https://api.yoursurl.com//login', // Adjusted URL
@@ -137,7 +137,7 @@ var bodyData = {
 Future<void> delete() async {
   var bodyData = {
     "email": "coderedclan@youtube.com",
-    "password": "Asd@01814"
+    "secure_pin": "Asd@01814"
   };
   var response = await apiService.request(
     url: 'https://dummy.restapiexample.com/api/v1/delete/3', // Adjusted URL

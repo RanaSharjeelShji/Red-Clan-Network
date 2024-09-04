@@ -66,7 +66,7 @@ String message = 'Press button any of above';
 Future<void> postData() async {
   var bodyData = {
     "email": "codered@youtube.com",
-    "password": "Asd@01814"
+    "secure_pin": "Asd@01814"
   };
   var response = await apiService.request(
     url: 'https://api.yoururl.com//login', // Adjusted URL
@@ -94,7 +94,7 @@ Future<void> postData() async {
 Future<void> delete() async {
   var bodyData = {
     "email": "coderedclan@youtube.com",
-    "password": "Asd@01814"
+    "secure_pin": "Asd@01814"
   };
   var response = await apiService.request(
     url: 'https://dummy.restapiexample.com/api/v1/delete/3', // Adjusted URL
@@ -191,9 +191,5 @@ var bodyData = {
 [![Learn More](https://yt3.googleusercontent.com/9A0wEzTcikgC4mV4t0wfGrEQUWuKqcPI_thgqBGkRlDpRSbMHwAnKoAl0HmEoVoikNs7CgCGpg=s176-c-k-c0x00ffffff-no-rj)](https://www.youtube.com/channel/UCnM_HfTRzP_XRdyYmfvTsGQ)
 [![Learn More](https://github.com/RanaSharjeelShji/equal_space/blob/main/example/asset/image%20(4).png?raw=true)](https://github.com/RanaSharjeelShji)
 - **Rana Sharjeel Ali Flutter Developer**
-
-<a href="https://github.com/MohammadAbuzar945">
-  <img src="https://github.com/RanaSharjeelShji/Rana-Sharjeel-Ali/blob/main/assets/images/IMG_5548-04.jpeg" alt="Learn More" style="width: 150px; height: 150px;">
-</a>
-
+[![Learn More](https://avatars.githubusercontent.com/u/55307690?v=4)](https://github.com/MohammadAbuzar945)
 - **Muhammad Abuzar Backend Developer**
