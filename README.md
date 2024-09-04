@@ -74,7 +74,7 @@ Future<void> postData() async {
     "secure_pin": "Asd@01814"
   };
   var response = await apiService.request(
-    url: 'https://api.yoururl.com//login', // Adjusted URL
+    url: 'https://api.yoururl.com//login', // Add your URL
     method: 'POST',
     successStatusCodes: [200, 201], 
     headers: {
@@ -102,7 +102,7 @@ Future<void> delete() async {
     "secure_pin": "Asd@01814"
   };
   var response = await apiService.request(
-    url: 'https://dummy.restapiexample.com/api/v1/delete/3', // Adjusted URL
+    url: 'https://dummy.restapiexample.com/api/v1/delete/3', // Add your URL
     method: 'DELETE',
     successStatusCodes: [200, 201], 
     headers: {
@@ -134,7 +134,7 @@ var bodyData = {
   "allow_negative_credits": false
 };
   var response = await apiService.request(
-    url: 'https://dummy.restapiexample.com/api/v1/update/21', // Adjusted URL
+    url: 'https://dummy.restapiexample.com/api/v1/update/21', // Add your URL
     method: 'PUT',
     successStatusCodes: [200, 201], 
     headers:{
@@ -167,7 +167,7 @@ var bodyData = {
   "allow_negative_credits": false
 };
   var response = await apiService.request(
-    url: 'https://your_patch_api_link', // Adjusted URL
+    url: 'https://your_patch_api_link', // Add your URL
     method: 'PATCH',
     successStatusCodes: [200, 201], 
     headers:{
