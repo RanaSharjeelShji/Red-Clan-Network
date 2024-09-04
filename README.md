@@ -192,5 +192,8 @@ var bodyData = {
 [![Learn More](https://github.com/RanaSharjeelShji/equal_space/blob/main/example/asset/image%20(4).png?raw=true)](https://github.com/RanaSharjeelShji)
 - **Sharjeel Flutter Developer**
 
-[![Learn More](https://github.com/RanaSharjeelShji/Rana-Sharjeel-Ali/blob/main/assets/images/IMG_5548-04.jpeg)](https://github.com/MohammadAbuzar945)
+<a href="https://github.com/MohammadAbuzar945">
+  <img src="https://github.com/RanaSharjeelShji/Rana-Sharjeel-Ali/blob/main/assets/images/IMG_5548-04.jpeg" alt="Learn More" style="width: 500px; height: 500px;">
+</a>
+
 - **Muhammad Abuzar Backend Developer**
