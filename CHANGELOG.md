@@ -8,3 +8,7 @@
 ## 0.0.3
 
 * POST API data handling.
+
+## 0.0.4
+
+* Now you can upload files In API calls.
