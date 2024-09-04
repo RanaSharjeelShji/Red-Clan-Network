@@ -41,13 +41,11 @@ class TodoModel {
   }
 }
 ```
-// Then add this use this function of package
 ### GET API Example
 ```
 Make an instance of api before use
-final ApiService apiService = ApiService();
-```dart
-//
+ //final ApiService apiService = ApiService();
+
 List<TodoModel> dataList = [];
 String message = 'Press button any of above';
  Future<void> fetchData() async {
