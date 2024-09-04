@@ -43,6 +43,7 @@ class TodoModel {
 ```
 // Then add this use this function of package
 ### GET API Example
+```
 Make an instance of api before use
 final ApiService apiService = ApiService();
 ```dart
