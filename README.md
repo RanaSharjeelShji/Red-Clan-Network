@@ -193,7 +193,7 @@ var bodyData = {
 - **Sharjeel Flutter Developer**
 
 <a href="https://github.com/MohammadAbuzar945">
-  <img src="https://github.com/RanaSharjeelShji/Rana-Sharjeel-Ali/blob/main/assets/images/IMG_5548-04.jpeg" alt="Learn More" style="width: 50px; height: 50px;">
+  <img src="https://github.com/RanaSharjeelShji/Rana-Sharjeel-Ali/blob/main/assets/images/IMG_5548-04.jpeg" alt="Learn More" style="width: 100px; height: 100px;">
 </a>
 
 - **Muhammad Abuzar Backend Developer**
