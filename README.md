@@ -9,7 +9,10 @@
 - **Simplified Code**: Get auto mapped models in simpliest form of `success` or `failure`.
 
 
-### Red_Clan_Networ Example
+### Red_Clan_Network Example
+```dart
+final ApiService apiService = ApiService();
+```
 
 ```dart
 Create Model
@@ -38,9 +41,10 @@ class TodoModel {
   }
 }
 // Then add this use this function of package
+### GET API Example
 Make an instance of api before use
-  final ApiService apiService = ApiService();
-  
+final ApiService apiService = ApiService();
+```dart
 //
 List<TodoModel> dataList = [];
 String message = 'Press button any of above';
