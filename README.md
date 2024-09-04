@@ -1,5 +1,4 @@
 # Red Clan Network
-[![Learn More](https://github.com/RanaSharjeelShji/SharjeelAliRana/blob/main/Picsart_24-06-13_21-28-33-543.jpg?raw=true)](https://www.youtube.com/channel/UCnM_HfTRzP_XRdyYmfvTsGQ)
 # About
 `red_clan_network` is a Dart package designed to simplify API requests by abstracting common functionalities like GET, POST, PUT, PATCH, and DELETE methods. It provides a flexible and customizable way to handle different types of HTTP requests and parse responses into Dart models.
 ## Features
@@ -70,7 +69,7 @@ Future<void> postData() async {
     "password": "Asd@01814"
   };
   var response = await apiService.request(
-    url: 'https://api.yoursurl.com//login', // Adjusted URL
+    url: 'https://api.yoururl.com//login', // Adjusted URL
     method: 'POST',
     successStatusCodes: [200, 201], 
     headers: {
