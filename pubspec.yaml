@@ -1,6 +1,6 @@
 name: red_clan_network
 description: "API integration on next level."
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/RanaSharjeelShji/red_clan_network
 license: MIT
 environment:
