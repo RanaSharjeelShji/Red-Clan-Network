@@ -1,3 +1,6 @@
+## 0.0.7
+
+* Enhanced and light weight library now with 160 score on pub.dev.
 ## 0.0.6
 
 * Approved Package For API calling.
