@@ -8,6 +8,8 @@
 - **Flexible Data Handling**: If you also need something in return you can provide model or function will return response.statusCode and resonponse.body automatically.
 - **Simplified Code**: Get auto mapped models in simpliest form of `success` or `failure`.
 
+# Warrning
+`red_clan_network` does not help you with Socket APIs, this feature is under development and coming soon. You can contribute with us by doing work on github repo
 
 ### Red_Clan_Network Example
 ```dart

@@ -1,3 +1,6 @@
+## 0.0.6
+
+* Approved Package For API calling.
 ## 0.0.5
 
 * Bug Fixings.

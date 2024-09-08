@@ -53,14 +53,10 @@ class ApiService {
       }
     } catch (e) {
       // Handle any exceptions that occur during the HTTP request
-      print('Exception: $e');
-      return ApiResponse.failure(response: 'An error occurred', code: 500);
+      return ApiResponse.failure(response: e, code: 500);
     }
 
-    // Log the URL, response body, and status code for debugging purposes
-    print('URL: $url');
-    print('Response Body: ${response.body}');
-    print('Status Code: ${response.statusCode}');
+
 
     // Check if the status code is in the list of success status codes
     if (successStatusCodes.contains(response.statusCode)) {
@@ -84,8 +80,7 @@ class ApiService {
         }
       } catch (e) {
         // Handle errors that occur during JSON decoding
-        print('Error decoding response: $e');
-        return ApiResponse.failure(response: 'Failed to parse response', code: response.statusCode);
+        return ApiResponse.failure(response: 'Update your model according to response: $e', code: response.statusCode);
       }
     } else {
       // Return a failure response if the status code is not in the success list

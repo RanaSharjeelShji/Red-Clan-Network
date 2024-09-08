@@ -3,15 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:red_clan_network/red_clan_network.dart';
 import 'package:http/http.dart' as http;
 
-// Define your model
+// Define your model to represent Todo data
 class TodoModel {
   int? userId;
   int? id;
   String? title;
   bool? completed;
 
+  // Constructor
   TodoModel({this.userId, this.id, this.title, this.completed});
 
+  // Method to create a TodoModel from JSON data
   TodoModel.fromJson(Map<String, dynamic> json) {
     userId = json['userId'];
     id = json['id'];
@@ -19,6 +21,7 @@ class TodoModel {
     completed = json['completed'];
   }
 
+  // Method to convert TodoModel to JSON format
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['userId'] = this.userId;
@@ -30,7 +33,7 @@ class TodoModel {
 }
 
 void main() {
-  runApp(MyApp());
+  runApp(MyApp()); // Run the MyApp widget
 }
 
 class MyApp extends StatelessWidget {
@@ -41,7 +44,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: MyHomePage(), // Set MyHomePage as the home screen
     );
   }
 }
@@ -52,16 +55,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final ApiService apiService = ApiService();
-  List<TodoModel> dataList = [];
-  String message = 'Press button any of above';
+  final ApiService apiService = ApiService(); // Create an instance of ApiService
+  List<TodoModel> dataList = []; // List to hold fetched data
+  String message = 'Press button any of above'; // Initial message
 
   @override
   void initState() {
     super.initState();
-    fetchData();
+    fetchData(); // Fetch data when the widget is initialized
   }
 
+  // Fetch data from the API
   Future<void> fetchData() async {
     var response = await apiService.request<TodoModel>(
       url: 'https://jsonplaceholder.typicode.com/todos', 
@@ -73,17 +77,18 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       if (response.isSuccess) {
         message = 'Data Fetched Success';
-        dataList = response.response as List<TodoModel>;
+        dataList = response.response as List<TodoModel>; // Update the dataList with fetched data
       } else {
-        message = 'Something went wrong with ${response.code}';
+        message = 'Something went wrong with ${response.code}'; // Update message if there was an error
       }
     });
   }
 
+  // Post data to the API
   Future<void> postData() async {
     var bodyData = {
       "email": "codered@youtube.com",
-      "secure_pin": "Asd@01814"
+      "secure_pin": "this is my pin"
     };
     var response = await apiService.request(
       url: 'https://api.yoursurl.com/login',
@@ -97,13 +102,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
     setState(() {
       if (response.isSuccess) {
-        message = 'Data Post Success';
+        message = 'Data Post Success'; // Update message on success
       } else {
-        message = 'Something went wrong with ${response.code}';
+        message = 'Something went wrong with ${response.code}'; // Update message on error
       }
     });
   }
 
+  // Put data to the API
   Future<void> putData() async {
     var bodyData = {
       "name": "CompanyX",
@@ -122,19 +128,20 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     setState(() {
-      dataList = [];
+      dataList = []; // Clear dataList on update
       if (response.isSuccess) {
-        message = 'Data Put Success';
+        message = 'Data Put Success'; // Update message on success
       } else {
-        message = 'Something went wrong with ${response.code}';
+        message = 'Something went wrong with ${response.code}'; // Update message on error
       }
     });
   }
 
+  // Delete data from the API
   Future<void> delete() async {
     var bodyData = {
       "email": "coderedclan@youtube.com",
-      "secure_pin": "Asd@01814"
+      "secure_pin": "this is my pin"
     };
     var response = await apiService.request(
       url: 'https://dummy.restapiexample.com/api/v1/delete/3',
@@ -148,15 +155,16 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     setState(() {
-      dataList = [];
+      dataList = []; // Clear dataList on delete
       if (response.isSuccess) {
-        message = 'Delete Success';
+        message = 'Delete Success'; // Update message on success
       } else {
-        message = 'Something went wrong with ${response.code}';
+        message = 'Something went wrong with ${response.code}'; // Update message on error
       }
     });
   }
 
+  // Patch data to the API
   Future<void> patchData() async {
     var bodyData = {
       "name": "CompanyX",
@@ -175,15 +183,16 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     setState(() {
-      dataList = [];
+      dataList = []; // Clear dataList on patch
       if (response.isSuccess) {
-        message = 'Patch Success';
+        message = 'Patch Success'; // Update message on success
       } else {
-        message = 'Something went wrong with ${response.code}';
+        message = 'Something went wrong with ${response.code}'; // Update message on error
       }
     });
   }
 
+  // Post data with a file to the API
   Future<void> postDataWithFile() async {
     var request = http.MultipartRequest(
       'POST',
@@ -207,9 +216,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
     setState(() {
       if (response.statusCode == 200 || response.statusCode == 201) {
-        message = 'File Upload Success';
+        message = 'File Upload Success'; // Update message on success
       } else {
-        message = 'Something went wrong with ${response.statusCode}';
+        message = 'Something went wrong with ${response.statusCode}'; // Update message on error
       }
     });
   }
@@ -218,49 +227,49 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('API Example'),
+        title: const Text('API Example'), // App bar title
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             ElevatedButton(
               onPressed: () async {
-                await postData();
+                await postData(); // Call postData when button is pressed
               },
               child: Text("Post Data"),
             ),
             ElevatedButton(
               onPressed: () async {
-                await delete();
+                await delete(); // Call delete when button is pressed
               },
               child: Text("Delete"),
             ),
             ElevatedButton(
               onPressed: () async {
-                await putData();
+                await putData(); // Call putData when button is pressed
               },
               child: Text("Put Data"),
             ),
             ElevatedButton(
               onPressed: () async {
-                await patchData();
+                await patchData(); // Call patchData when button is pressed
               },
               child: Text("Patch Data"),
             ),
             ElevatedButton(
               onPressed: () async {
-                await fetchData();
+                await fetchData(); // Call fetchData when button is pressed
               },
               child: Text("Fetch Data"),
             ),
             ElevatedButton(
               onPressed: () async {
-                await postDataWithFile();
+                await postDataWithFile(); // Call postDataWithFile when button is pressed
               },
               child: Text("Post Data with File"),
             ),
             Divider(),
-            Text(message),
+            Text(message), // Display message based on API response
             Divider(),
             Center(
               child: Column(
@@ -272,7 +281,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     itemCount: dataList.length,
                     itemBuilder: (context, index) {
                       return ListTile(
-                        title: Text(dataList[index].title.toString()),
+                        title: Text(dataList[index].title.toString()), // Display title of each Todo item
                         subtitle: dataList[index].completed != true
                             ? Container(
                                 width: 10,
